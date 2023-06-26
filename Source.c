@@ -1,0 +1,546 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<conio.h>
+#include<string.h>
+main(){
+    char reader[12],rdr;
+    int choic,counter,notsupported=0,i;
+    FILE *mydata,*helper;
+    for(;;){
+        notsupported=0;
+        //clrscr();
+        system("cls");
+        do{
+            printf(" put you're choice (1-3):\n 1)encryption.\n 2)decryption.\n 3)exit.\n");
+            scanf("%d",&choic);
+        }while(choic<1 || choic>3);
+            if(choic==1){
+                    do{
+                            //clrscr();
+                            system("cls");
+                printf("put you're Key level (1-100).");scanf("%d",&choic);
+                    }while(choic<1 || choic>100);
+                for(counter=1;counter<=choic;counter++){
+                    printf("\n  %d/%d.",counter,choic);
+                    mydata=fopen("DATA\\Data.txt","rt");
+                    if(mydata==NULL){
+                        printf("you'r Dtat.txt file does not exist.");
+                    }else{
+                        helper=fopen("temp.txt","wt");
+                        if(helper==NULL){
+                            printf("Memory space Error.");
+                        }else{
+                            for(rdr=fgetc(mydata);rdr!=EOF;rdr=fgetc(mydata)){
+                                 switch (rdr){
+                                    case 'a':
+                                        fputs("0101001101",helper);break;
+                                    case 'b':
+                                        fputs("1110100101",helper);break;
+                                    case 'c':
+                                        fputs("0000110000",helper);break;
+                                    case 'd':
+                                        fputs("1000011101",helper);break;
+                                    case 'e':
+                                        fputs("1111101000",helper);break;
+                                    case 'f':
+                                        fputs("1110111001",helper);break;
+                                    case 'g':
+                                        fputs("0101011110",helper);break;
+                                    case 'h':
+                                        fputs("1100111101",helper);break;
+                                    case 'i':
+                                        fputs("1111110111",helper);break;
+                                    case 'j':
+                                        fputs("0111010011",helper);break;
+                                    case 'k':
+                                        fputs("1111110110",helper);break;
+                                    case 'l':
+                                        fputs("0101000101",helper);break;
+                                    case 'm':
+                                        fputs("1001010101",helper);break;
+                                    case 'n':
+                                        fputs("1010000100",helper);break;
+                                    case 'o':
+                                        fputs("1010010100",helper);break;
+                                    case 'p':
+                                        fputs("1000011011",helper);break;
+                                    case 'q':
+                                        fputs("0100010000",helper);break;
+                                    case 'r':
+                                        fputs("0101101111",helper);break;
+                                    case 's':
+                                        fputs("1000010010",helper);break;
+                                    case 't':
+                                        fputs("1011100100",helper);break;
+                                    case 'u':
+                                        fputs("0100010100",helper);break;
+                                    case 'v':
+                                        fputs("1001100011",helper);break;
+                                    case 'w':
+                                        fputs("0100100010",helper);break;
+                                    case 'x':
+                                        fputs("0111111001",helper);break;
+                                    case 'y':
+                                        fputs("1101000101",helper);break;
+                                    case 'z':
+                                        fputs("1000100010",helper);break;
+                                    case 'A':
+                                        fputs("1111101001",helper);break;
+                                    case 'B':
+                                        fputs("0011110001",helper);break;
+                                    case 'C':
+                                        fputs("1110101100",helper);break;
+                                    case 'D':
+                                        fputs("0010111001",helper);break;
+                                    case 'E':
+                                        fputs("1111111001",helper);break;
+                                    case 'F':
+                                        fputs("0101000110",helper);break;
+                                    case 'G':
+                                        fputs("1011011011",helper);break;
+                                    case 'H':
+                                        fputs("0101100001",helper);break;
+                                    case 'I':
+                                        fputs("1001011110",helper);break;
+                                    case 'J':
+                                        fputs("0100110110",helper);break;
+                                    case 'K':
+                                        fputs("1011010011",helper);break;
+                                    case 'L':
+                                        fputs("0000111001",helper);break;
+                                    case 'M':
+                                        fputs("1011001100",helper);break;
+                                    case 'N':
+                                        fputs("0111101000",helper);break;
+                                    case 'O':
+                                        fputs("0101000010",helper);break;
+                                    case 'P':
+                                        fputs("0110101000",helper);break;
+                                    case 'Q':
+                                        fputs("0011000010",helper);break;
+                                    case 'R':
+                                        fputs("1111001100",helper);break;
+                                    case 'S':
+                                        fputs("0000011010",helper);break;
+                                    case 'T':
+                                        fputs("0000101011",helper);break;
+                                    case 'U':
+                                        fputs("1101110111",helper);break;
+                                    case 'V':
+                                        fputs("1011111001",helper);break;
+                                    case 'W':
+                                        fputs("0001001000",helper);break;
+                                    case 'X':
+                                        fputs("0111011001",helper);break;
+                                    case 'Y':
+                                        fputs("0100101110",helper);break;
+                                    case 'Z':
+                                        fputs("0101000000",helper);break;
+                                    case '0':
+                                        fputs("1101100010",helper);break;
+                                    case '1':
+                                        fputs("0101010110",helper);break;
+                                    case '2':
+                                        fputs("0011000000",helper);break;
+                                    case '3':
+                                        fputs("0101010101",helper);break;
+                                    case '4':
+                                        fputs("0110011100",helper);break;
+                                    case '5':
+                                        fputs("0100110000",helper);break;
+                                    case '6':
+                                        fputs("0111101110",helper);break;
+                                    case '7':
+                                        fputs("0010011110",helper);break;
+                                    case '8':
+                                        fputs("0011010110",helper);break;
+                                    case '9':
+                                        fputs("0100101111",helper);break;
+                                    case '+':
+                                        fputs("1001011111",helper);break;
+                                    case '-':
+                                        fputs("1110011101",helper);break;
+                                    case '/':
+                                        fputs("0000101111",helper);break;
+                                    case '*':
+                                        fputs("1101100101",helper);break;
+                                    case '.':
+                                        fputs("0110011110",helper);break;
+                                    case '=':
+                                        fputs("0100001111",helper);break;
+                                    case '<':
+                                        fputs("1010001001",helper);break;
+                                    case '>':
+                                        fputs("1110010010",helper);break;
+                                    case '{':
+                                        fputs("0110001000",helper);break;
+                                    case '}':
+                                        fputs("1101011110",helper);break;
+                                    case '(':
+                                        fputs("0111110000",helper);break;
+                                    case ')':
+                                        fputs("1101000001",helper);break;
+                                    case '[':
+                                        fputs("0010011010",helper);break;
+                                    case ']':
+                                        fputs("0010010101",helper);break;
+                                    case '@':
+                                        fputs("1010010011",helper);break;
+                                    case '&':
+                                        fputs("1000001001",helper);break;
+                                    case '%':
+                                        fputs("0011110101",helper);break;
+                                    case '#':
+                                        fputs("0011011111",helper);break;
+                                    case ',':
+                                        fputs("1010010000",helper);break;
+                                    case ';':
+                                        fputs("1111010110",helper);break;
+                                    case ':':
+                                        fputs("1000101110",helper);break;
+                                    case '!':
+                                        fputs("1000100101",helper);break;
+                                    case '?':
+                                        fputs("1110110001",helper);break;
+                                    case '$':
+                                        fputs("0110010110",helper);break;
+                                    case '¨':
+                                        fputs("0100111010",helper);break;
+                                    case '^':
+                                        fputs("0101001100",helper);break;
+                                    case '~':
+                                        fputs("1100101011",helper);break;
+                                    case '"':
+                                        fputs("1100100101",helper);break;
+                                    case '|':
+                                        fputs("0100100011",helper);break;
+                                    case '`':
+                                        fputs("0100001001",helper);break;
+                                    case '_':
+                                        fputs("1101010001",helper);break;
+                                    case '°':
+                                        fputs("1000011110",helper);break;
+                                    case ' ':
+                                        fputs("1011010100",helper);break;
+                                    case '“':
+                                        fputs("1000001110",helper);break;
+                                    case '”':
+                                        fputs("0111110011",helper);break;
+                                    case 9:
+                                        fputs("0010000010",helper);break;
+                                    case 92:
+                                        fputs("1100101111",helper);break;
+                                    case 39:
+                                        fputs("1001110100",helper);break;
+                                    case 10:
+                                        fputs("0101110100",helper);break;
+                                    default:
+                                        /*//fputc(rdr,helper);
+                                        printf(" %c  Not Supported to encryption.\n",rdr);
+                                        getch();
+                                        fclose(mydata);
+                                        fclose(helper);
+                                        remove("temp.txt");
+                                        notsupported=1;*/
+                                        for(i=1;i<=10;i++){
+                                            fputc(rdr,helper);
+                                        }
+
+                                        }
+                                }
+                                if(notsupported==0){
+                                  fclose(mydata);
+                                  fclose(helper);
+                                  mydata=fopen("DATA\\Data.txt","wt");
+                                  if(mydata==NULL){
+                                    printf("Memory space Error.");
+                                  }else{
+                                    helper=fopen("temp.txt","rt");
+                                    if(helper==NULL){
+                                       printf("Memory Error.");
+                                    }else{
+                                        for(rdr=fgetc(helper);!feof(helper);rdr=fgetc(helper)){
+                                            fputc(rdr,mydata);
+                                        }
+                                    }
+                                  }
+                                  fclose(mydata);
+                                  fclose(helper);
+                                  remove("temp.txt");
+
+                                }else{
+                                    break;
+                                }
+                        }
+                    }
+                 }
+                 if(notsupported==0){
+                    printf("\nProcessing Done.");
+                    getch();
+                 }else{
+                    printf("\nProcessing ERROR.");
+                    getch();
+                 }
+
+            }else if(choic==2){
+                do{
+                    //clrscr();
+                    system("cls");
+                printf("put you're decryption Key (1-100).");scanf("%d",&choic);
+                }while(choic<1 || choic>100);
+                for(counter=1;counter<=choic;counter++){
+                        printf("\n  %d/%d.",counter,choic);
+                mydata=fopen("DATA\\Data.txt","rt");
+                    if(mydata==NULL){
+                        printf("you'r Dtat.txt file does not exist.");
+                    }else{
+                        helper=fopen("temp.txt","wt");
+                        if(helper==NULL){
+                            printf("Memory space Error.");
+                        }else{
+                                for(fgets(reader,11,mydata);!feof(mydata);fgets(reader,11,mydata)){
+                                        if(strcmp(reader,"0101001101")==0){
+                                            fputc('a',helper);
+                                        }else if(strcmp(reader,"1110100101")==0){
+                                            fputc('b',helper);
+                                        }else if(strcmp(reader,"0000110000")==0){
+                                            fputc('c',helper);
+                                        }else if(strcmp(reader,"1000011101")==0){
+                                            fputc('d',helper);
+                                        }else if(strcmp(reader,"1111101000")==0){
+                                            fputc('e',helper);
+                                        }else if(strcmp(reader,"1110111001")==0){
+                                            fputc('f',helper);
+                                        }else if(strcmp(reader,"0101011110")==0){
+                                            fputc('g',helper);
+                                        }else if(strcmp(reader,"1100111101")==0){
+                                            fputc('h',helper);
+                                        }else if(strcmp(reader,"1111110111")==0){
+                                            fputc('i',helper);
+                                        }else if(strcmp(reader,"0111010011")==0){
+                                            fputc('j',helper);
+                                        }else if(strcmp(reader,"1111110110")==0){
+                                            fputc('k',helper);
+                                        }else if(strcmp(reader,"0101000101")==0){
+                                            fputc('l',helper);
+                                        }else if(strcmp(reader,"1001010101")==0){
+                                            fputc('m',helper);
+                                        }else if(strcmp(reader,"1010000100")==0){
+                                            fputc('n',helper);
+                                        }else if(strcmp(reader,"1010010100")==0){
+                                            fputc('o',helper);
+                                        }else if(strcmp(reader,"1000011011")==0){
+                                            fputc('p',helper);
+                                        }else if(strcmp(reader,"0100010000")==0){
+                                            fputc('q',helper);
+                                        }else if(strcmp(reader,"0101101111")==0){
+                                            fputc('r',helper);
+                                        }else if(strcmp(reader,"1000010010")==0){
+                                            fputc('s',helper);
+                                        }else if(strcmp(reader,"1011100100")==0){
+                                            fputc('t',helper);
+                                        }else if(strcmp(reader,"0100010100")==0){
+                                            fputc('u',helper);
+                                        }else if(strcmp(reader,"1001100011")==0){
+                                            fputc('v',helper);
+                                        }else if(strcmp(reader,"0100100010")==0){
+                                            fputc('w',helper);
+                                        }else if(strcmp(reader,"0111111001")==0){
+                                            fputc('x',helper);
+                                        }else if(strcmp(reader,"1101000101")==0){
+                                            fputc('y',helper);
+                                        }else if(strcmp(reader,"1000100010")==0){
+                                            fputc('z',helper);
+                                        }else if(strcmp(reader,"1111101001")==0){
+                                            fputc('A',helper);
+                                        }else if(strcmp(reader,"0011110001")==0){
+                                            fputc('B',helper);
+                                        }else if(strcmp(reader,"1110101100")==0){
+                                            fputc('C',helper);
+                                        }else if(strcmp(reader,"0010111001")==0){
+                                            fputc('D',helper);
+                                        }else if(strcmp(reader,"1111111001")==0){
+                                            fputc('E',helper);
+                                        }else if(strcmp(reader,"0101000110")==0){
+                                            fputc('F',helper);
+                                        }else if(strcmp(reader,"1011011011")==0){
+                                            fputc('G',helper);
+                                        }else if(strcmp(reader,"0101100001")==0){
+                                            fputc('H',helper);
+                                        }else if(strcmp(reader,"1001011110")==0){
+                                            fputc('I',helper);
+                                        }else if(strcmp(reader,"0100110110")==0){
+                                            fputc('J',helper);
+                                        }else if(strcmp(reader,"1011010011")==0){
+                                            fputc('K',helper);
+                                        }else if(strcmp(reader,"0000111001")==0){
+                                            fputc('L',helper);
+                                        }else if(strcmp(reader,"1011001100")==0){
+                                            fputc('M',helper);
+                                        }else if(strcmp(reader,"0111101000")==0){
+                                            fputc('N',helper);
+                                        }else if(strcmp(reader,"0101000010")==0){
+                                            fputc('O',helper);
+                                        }else if(strcmp(reader,"0110101000")==0){
+                                            fputc('P',helper);
+                                        }else if(strcmp(reader,"0011000010")==0){
+                                            fputc('Q',helper);
+                                        }else if(strcmp(reader,"1111001100")==0){
+                                            fputc('R',helper);
+                                        }else if(strcmp(reader,"0000011010")==0){
+                                            fputc('S',helper);
+                                        }else if(strcmp(reader,"0000101011")==0){
+                                            fputc('T',helper);
+                                        }else if(strcmp(reader,"1101110111")==0){
+                                            fputc('U',helper);
+                                        }else if(strcmp(reader,"1011111001")==0){
+                                            fputc('V',helper);
+                                        }else if(strcmp(reader,"0001001000")==0){
+                                            fputc('W',helper);
+                                        }else if(strcmp(reader,"0111011001")==0){
+                                            fputc('X',helper);
+                                        }else if(strcmp(reader,"0100101110")==0){
+                                            fputc('Y',helper);
+                                        }else if(strcmp(reader,"0101000000")==0){
+                                            fputc('Z',helper);
+                                        }else if(strcmp(reader,"1101100010")==0){
+                                            fputc('0',helper);
+                                        }else if(strcmp(reader,"0101010110")==0){
+                                            fputc('1',helper);
+                                        }else if(strcmp(reader,"0011000000")==0){
+                                            fputc('2',helper);
+                                        }else if(strcmp(reader,"0101010101")==0){
+                                            fputc('3',helper);
+                                        }else if(strcmp(reader,"0110011100")==0){
+                                            fputc('4',helper);
+                                        }else if(strcmp(reader,"0100110000")==0){
+                                            fputc('5',helper);
+                                        }else if(strcmp(reader,"0111101110")==0){
+                                            fputc('6',helper);
+                                        }else if(strcmp(reader,"0010011110")==0){
+                                            fputc('7',helper);
+                                        }else if(strcmp(reader,"0011010110")==0){
+                                            fputc('8',helper);
+                                        }else if(strcmp(reader,"0100101111")==0){
+                                            fputc('9',helper);
+                                        }else if(strcmp(reader,"1001011111")==0){
+                                            fputc('+',helper);
+                                        }else if(strcmp(reader,"1110011101")==0){
+                                            fputc('-',helper);
+                                        }else if(strcmp(reader,"0000101111")==0){
+                                            fputc('/',helper);
+                                        }else if(strcmp(reader,"1101100101")==0){
+                                            fputc('*',helper);
+                                        }else if(strcmp(reader,"0110011110")==0){
+                                            fputc('.',helper);
+                                        }else if(strcmp(reader,"0100001111")==0){
+                                            fputc('=',helper);
+                                        }else if(strcmp(reader,"1010001001")==0){
+                                            fputc('<',helper);
+                                        }else if(strcmp(reader,"1110010010")==0){
+                                            fputc('>',helper);
+                                        }else if(strcmp(reader,"0110001000")==0){
+                                            fputc('{',helper);
+                                        }else if(strcmp(reader,"1101011110")==0){
+                                            fputc('}',helper);
+                                        }else if(strcmp(reader,"0111110000")==0){
+                                            fputc('(',helper);
+                                        }else if(strcmp(reader,"1101000001")==0){
+                                            fputc(')',helper);
+                                        }else if(strcmp(reader,"0010011010")==0){
+                                            fputc('[',helper);
+                                        }else if(strcmp(reader,"0010010101")==0){
+                                            fputc(']',helper);
+                                        }else if(strcmp(reader,"1010010011")==0){
+                                            fputc('@',helper);
+                                        }else if(strcmp(reader,"1000001001")==0){
+                                            fputc('&',helper);
+                                        }else if(strcmp(reader,"0011110101")==0){
+                                            fputc('%',helper);
+                                        }else if(strcmp(reader,"0011011111")==0){
+                                            fputc('#',helper);
+                                        }else if(strcmp(reader,"1010010000")==0){
+                                            fputc(',',helper);
+                                        }else if(strcmp(reader,"1111010110")==0){
+                                            fputc(';',helper);
+                                        }else if(strcmp(reader,"1000101110")==0){
+                                            fputc(':',helper);
+                                        }else if(strcmp(reader,"1000100101")==0){
+                                            fputc('!',helper);
+                                        }else if(strcmp(reader,"1110110001")==0){
+                                            fputc('?',helper);
+                                        }else if(strcmp(reader,"0110010110")==0){
+                                            fputc('$',helper);
+                                        }else if(strcmp(reader,"0100111010")==0){
+                                            fputc('¨',helper);
+                                        }else if(strcmp(reader,"0101001100")==0){
+                                            fputc('^',helper);
+                                        }else if(strcmp(reader,"1100101011")==0){
+                                            fputc('~',helper);
+                                        }else if(strcmp(reader,"1100100101")==0){
+                                            fputc('"',helper);
+                                        }else if(strcmp(reader,"0100100011")==0){
+                                            fputc('|',helper);
+                                        }else if(strcmp(reader,"0100001001")==0){
+                                            fputc('`',helper);
+                                        }else if(strcmp(reader,"1101010001")==0){
+                                            fputc('_',helper);
+                                        }else if(strcmp(reader,"1000011110")==0){
+                                            fputc('°',helper);
+                                        }else if(strcmp(reader,"1011010100")==0){
+                                            fputc(' ',helper);
+                                        }else if(strcmp(reader,"1000001110")==0){
+                                            fputc('“',helper);
+                                        }else if(strcmp(reader,"0111110011")==0){
+                                            fputc('”',helper);
+                                        }else if(strcmp(reader,"1100101111")==0){
+                                            fputc(92,helper);
+                                        }else if(strcmp(reader,"1001110100")==0){
+                                            fputc(39,helper);
+                                        }else if(strcmp(reader,"0010000010")==0){
+                                            fputc(9,helper);
+                                        }
+                                        else if(strcmp(reader,"0101110100")==0){
+                                            fputc(10,helper);
+                                        }
+                                        else{
+                                            //fputs("\n",helper);
+                                            fputc(reader[0],helper);
+                                        }
+
+
+                                }
+                                    fclose(helper);
+                                    mydata=fopen("DATA\\Data.txt","wt");
+                                    if(mydata==NULL){
+                                        printf("Memory space Error.");
+                                    }else{
+                                        helper=fopen("temp.txt","rt");
+                                        if(helper==NULL){
+                                            printf("Memory Error.");
+                                        }else{
+                                            for(rdr=fgetc(helper);!feof(helper);rdr=fgetc(helper)){
+                                                fputc(rdr,mydata);
+                                            }
+                                        }
+                                    }
+                                    fclose(mydata);
+                                    fclose(helper);
+                                    remove("temp.txt");
+
+                        }
+                    }
+                }
+                  printf("\nProcessing Done.");
+                  getch();
+            }else{
+                printf("Good By....");getch();
+                exit(0);
+            }
+
+
+    }
+
+}
+
+
